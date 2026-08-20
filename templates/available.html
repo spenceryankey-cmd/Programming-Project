@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Available Now{% endblock %}
+{% block content %}
+  <h2>Available Now</h2>
+
+  <form class="inline" method="get" action="/available">
+    <div>
+      <label for="day">Day</label>
+      <select id="day" name="day">
+        {% for d in days %}
+          <option value="{{ d }}" {{ "selected" if d == current_day else "" }}>{{ d }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" value="{{ current_time }}">
+    </div>
+    <button type="submit">Check Availability</button>
+  </form>
+
+  <p class="meta">Showing items available {{ current_day }} at {{ current_time }}.</p>
+
+  {% if items %}
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Cafeteria</th>
+          <th>Category</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+          <tr>
+            <td><a href="/cafeteria/{{ item.cafeteria }}">{{ item.name }}</a></td>
+            <td>{{ item.cafeteria }}</td>
+            <td>{{ item.category }}</td>
+            <td>GHS{{ "%.2f"|format(item.price) }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="empty">All meals unavailable.</p>
+  {% endif %}
+{% endblock %}
