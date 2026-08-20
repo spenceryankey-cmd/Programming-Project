@@ -1,0 +1,67 @@
+{
+  "Cheeseburger": {
+    "calories": 263.0,
+    "protein": 13.0,
+    "allergens": []
+  },
+  "Garden Salad": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Grilled Chicken Sandwich": {
+    "calories": 215.0,
+    "protein": 18.6,
+    "allergens": []
+  },
+  "Tom Brown": {
+    "calories": 370.0,
+    "protein": 7.1,
+    "allergens": []
+  },
+  "Orange Juice": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Sobolo": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Chocolate Chip Cookie": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Atsormor": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Waakye with option": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Red Red with Fried Plantain": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Ga Kenkey w/ Sardine and Omelet": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Bottled Water": {
+    "calories": 0.0,
+    "protein": 0.0,
+    "allergens": []
+  },
+  "Kelewele": {
+    "calories": 122.0,
+    "protein": 1.3,
+    "allergens": []
+  }
+}

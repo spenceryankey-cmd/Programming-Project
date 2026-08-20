@@ -1,0 +1,45 @@
+{
+  "cafeterias": [
+    {
+      "id": "c1",
+      "name": "North Campus Dining",
+      "schedule": {
+        "Monday": {"open": "07:00", "close": "20:00"},
+        "Tuesday": {"open": "07:00", "close": "20:00"},
+        "Wednesday": {"open": "07:00", "close": "20:00"},
+        "Thursday": {"open": "07:00", "close": "20:00"},
+        "Friday": {"open": "07:00", "close": "18:00"},
+        "Saturday": {"open": "09:00", "close": "15:00"},
+        "Sunday": {"open": "09:00", "close": "15:00"}
+      },
+      "menu": [
+        {"id": "i1", "name": "Cheeseburger", "price": 8.5, "category": "Entree", "meal_period": "Lunch"},
+        {"id": "i2", "name": "Garden Salad", "price": 6.0, "category": "Entree", "meal_period": "Lunch"},
+        {"id": "i3", "name": "Grilled Chicken Sandwich", "price": 9.0, "category": "Entree", "meal_period": "Dinner"},
+        {"id": "i4", "name": "Tom Brown", "price": 5.0, "category": "Entree", "meal_period": "Breakfast"},
+        {"id": "i5", "name": "Orange Juice", "price": 3.0, "category": "Beverage", "is_cold": true},
+        {"id": "i6", "name": "Sobolo", "price": 2.5, "category": "Beverage", "is_cold": true},
+        {"id": "i7", "name": "Chocolate Chip Cookie", "price": 2.0, "category": "Snack", "restricted_days": ["Saturday", "Sunday"]},
+        {"id": "i8", "name": "Atsormor", "price": 2.0, "category": "Snack", "restricted_days": []}
+      ]
+    },
+    {
+      "id": "c2",
+      "name": "South Campus Grill",
+      "schedule": {
+        "Monday": {"open": "08:00", "close": "21:00"},
+        "Tuesday": {"open": "08:00", "close": "21:00"},
+        "Wednesday": {"open": "08:00", "close": "21:00"},
+        "Thursday": {"open": "08:00", "close": "21:00"},
+        "Friday": {"open": "08:00", "close": "21:00"}
+      },
+      "menu": [
+        {"id": "i9", "name": "Waakye with option", "price": 10.0, "category": "Entree", "meal_period": "Lunch"},
+        {"id": "i10", "name": "Red Red with Fried Plantain", "price": 9.0, "category": "Entree", "meal_period": "Lunch"},
+        {"id": "i11", "name": "Ga Kenkey w/ Sardine and Omelet", "price": 8.0, "category": "Entree", "meal_period": "Breakfast"},
+        {"id": "i12", "name": "Bottled Water", "price": 1.5, "category": "Beverage", "is_cold": true},
+        {"id": "i13", "name": "Kelewele", "price": 3.0, "category": "Snack", "restricted_days": ["Sunday"]}
+      ]
+    }
+  ]
+}
