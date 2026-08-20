@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Meal Planner{% endblock %}
+{% block content %}
+  <h2>Meal Planner</h2>
+  <p>
+    Kindly fill in the contraints you would like then watch the magic happen as we make your meal plan come to LIFE!!!
+  </p>
+
+  <form method="get" action="/planner">
+    <p>
+      <label for="day">Day</label><br>
+      <select id="day" name="day">
+        {% for d in days %}
+          <option value="{{ d }}" {{ "selected" if d == day else "" }}>{{ d }}</option>
+        {% endfor %}
+      </select>
+    </p>
+
+    <p>
+      <label for="budget">Maximum total budget (GHS, optional)</label><br>
+      <input type="text" id="budget" name="budget" value="{{ budget }}">
+    </p>
+
+    <p>
+      <label for="exclude">What you're allergic to(please separate with commas, optional)</label><br>
+      <input type="text" id="exclude" name="exclude" value="{{ exclude }}" placeholder="e.g. dairy, gluten free">
+    </p>
+
+    <p>
+      <label for="cal_min">Minimum calories for the day (optional)</label><br>
+      <input type="text" id="cal_min" name="cal_min" value="{{ cal_min }}">
+    </p>
+
+    <p>
+      <label for="cal_max">Maximum calories for the day (optional)</label><br>
+      <input type="text" id="cal_max" name="cal_max" value="{{ cal_max }}">
+    </p>
+
+    <p>
+      <label for="protein_min">Minimum protein for the day, in grams (optional)</label><br>
+      <input type="text" id="protein_min" name="protein_min" value="{{ protein_min }}">
+    </p>
+
+    <p>
+      <label for="max_per_cafe">Maximum items from the same cafeteria</label><br>
+      <input type="text" id="max_per_cafe" name="max_per_cafe" value="{{ max_per_cafe }}">
+    </p>
+
+    <p><button type="submit">Build My Plan</button></p>
+  </form>
+
+  <hr>
+
+  {% if error %}
+    <p><strong>{{ error }}</strong></p>
+  {% elif submitted %}
+    {% if plan %}
+      <h3>Your Plan for {{ day }}</h3>
+      <table border="1" cellpadding="6">
+        <thead>
+          <tr>
+            <th>Slot</th>
+            <th>Cafeteria</th>
+            <th>Item</th>
+            <th>Price (GHS)</th>
+            <th>Calories</th>
+            <th>Protein (g)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for cafeteria, item, slot in plan %}
+            <tr>
+              <td>{{ slot }}</td>
+              <td>{{ cafeteria }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.price }}</td>
+              <td>{{ item.calories }}</td>
+              <td>{{ item.protein }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        {% if totals %}
+        <tfoot>
+          <tr>
+            <td colspan="3"><strong>Totals</strong></td>
+            <td><strong>{{ totals.price }}</strong></td>
+            <td><strong>{{ totals.calories }}</strong></td>
+            <td><strong>{{ totals.protein }}</strong></td>
+          </tr>
+        </tfoot>
+        {% endif %}
+      </table>
+    {% else %}
+      <p>No meal plan satisfies those conditions. Please, try something else.</p>
+    {% endif %}
+  {% endif %}
+{% endblock %}

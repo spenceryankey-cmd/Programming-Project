@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Search Menu{% endblock %}
+{% block content %}
+  <h2>Search Menu</h2>
+
+  <form class="inline" method="get" action="/search">
+    <div>
+      <label for="q">Item name</label>
+      <input type="text" id="q" name="q" value="{{ query }}" placeholder="e.g. chicken">
+    </div>
+    <button type="submit">Search</button>
+  </form>
+
+  {% if query %}
+    <p class="meta">
+      {{ results|length }} result{{ 's' if results|length != 1 else '' }} for "{{ query }}"
+    </p>
+    {% if results %}
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Cafeteria</th>
+            <th>Category</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in results %}
+            <tr>
+              <td>{{ item.name }}</td>
+              <td><a href="/cafeteria/{{ item.cafeteria }}">{{ item.cafeteria }}</a></td>
+              <td>{{ item.category }}</td>
+              <td>GHS{{ "%.2f"|format(item.price) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p class="empty">No items matched your search.</p>
+    {% endif %}
+  {% endif %}
+{% endblock %}

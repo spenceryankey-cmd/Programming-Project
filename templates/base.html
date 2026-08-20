@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Campus Cafeterias{% endblock %}</title>
+  <style>
+    :root {
+      --accent: lightseagreen;
+      --accent-dark: rgb(33, 67, 79);
+      --bg: rgb(152, 186, 214);
+      --card: rgb(144, 219, 207);
+      --border: rgb(86, 86, 208);
+      --text: rgb(61, 52, 85);
+      --muted: rgb(44, 87, 110);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 1.2rem 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+    header h1 a {
+      color: white;
+      text-decoration: none;
+    }
+    nav {
+      margin-top: 0.6rem;
+    }
+    nav a {
+      color: rgb(202, 226, 243);
+      text-decoration: none;
+      margin-right: 1.2rem;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+    }
+    nav a:hover {
+      border-bottom: 1px solid rgb(192, 211, 213);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.4rem;
+      font-size: 1.3rem;
+    }
+    .card-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 0.9rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+    }
+    .card a {
+      color: var(--accent-dark);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.05rem;
+    }
+    .card a:hover { text-decoration: underline; }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--card);
+    }
+    th, td {
+      text-align: left;
+      padding: 0.55rem 0.7rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+    th {
+      background: rgb(163, 216, 208);
+      color: var(--accent-dark);
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      background: rgb(179, 225, 218);
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      margin-right: 0.2rem;
+    }
+    form.inline {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      align-items: end;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    form.inline label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+    input[type="text"], input[type="time"], select {
+      padding: 0.4rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    button:hover { background: var(--accent-dark); }
+    .empty {
+      color: var(--muted);
+      font-style: italic;
+      padding: 1rem 0;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin: 3rem 0 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">Campus Cafeterias</a></h1>
+    <nav>
+      <a href="/">All Cafeterias</a>
+      <a href="/available">Available Now</a>
+      <a href="/search">Search Menu</a>
+      <a href="/planner">Meal Planner</a>
+      {% if session.username %}
+        Logged in as {{ session.username }} | <a href="/logout">Log Out</a>
+      {% else %}
+        <a href="/login">Log In</a> | <a href="/register">Register</a>
+      {% endif %}
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>Made by The Guru Group</footer>
+</body>
+</html>

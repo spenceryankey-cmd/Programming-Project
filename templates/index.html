@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}All Cafeterias{% endblock %}
+{% block content %}
+  <h2>All Cafeterias</h2>
+  {% if cafeterias %}
+    <ul class="card-list">
+      {% for cafe in cafeterias %}
+        <li class="card">
+          <a href="/cafeteria/{{ cafe.name }}">{{ cafe.name }}</a>
+          <div class="meta">{{ cafe.item_count }} menu item{{ 's' if cafe.item_count != 1 else '' }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="empty">No cafeterias loaded.</p>
+  {% endif %}
+{% endblock %}

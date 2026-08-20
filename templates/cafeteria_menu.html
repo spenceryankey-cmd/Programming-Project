@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}{{ cafeteria_name }} Menu{% endblock %}
+{% block content %}
+  <p><a href="/"> All cafeterias</a></p>
+  <h2>{{ cafeteria_name }}</h2>
+  {% if items %}
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Calories</th>
+          <th>Protein (g)</th>
+          <th>Allergens</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.category }}</td>
+            <td>GHs{{ "%.2f"|format(item.price) }}</td>
+            <td>{{ item.calories }}</td>
+            <td>{{ item.protein }}</td>
+            <td>
+              {% for a in item.allergens %}
+                <span class="badge">{{ a }}</span>
+              {% else %}
+                N/A
+              {% endfor %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="empty">No menu items found for this cafeteria.</p>
+  {% endif %}
+{% endblock %}
