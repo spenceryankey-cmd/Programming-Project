@@ -1,44 +1,1595 @@
 {
   "cafeterias": [
     {
-      "id": "c1",
-      "name": "North Campus Dining",
-      "schedule": {
-        "Monday": {"open": "07:00", "close": "20:00"},
-        "Tuesday": {"open": "07:00", "close": "20:00"},
-        "Wednesday": {"open": "07:00", "close": "20:00"},
-        "Thursday": {"open": "07:00", "close": "20:00"},
-        "Friday": {"open": "07:00", "close": "18:00"},
-        "Saturday": {"open": "09:00", "close": "15:00"},
-        "Sunday": {"open": "09:00", "close": "15:00"}
+      "id": "akonnor",
+      "name": "Akonnor Cafe",
+      "meal_periods": {
+        "breakfast": "morning",
+        "lunch": "Noon Escape, 11:00am",
+        "dinner": "Dinner Affairs, 4:00pm"
       },
       "menu": [
-        {"id": "i1", "name": "Cheeseburger", "price": 8.5, "category": "Entree", "meal_period": "Lunch"},
-        {"id": "i2", "name": "Garden Salad", "price": 6.0, "category": "Entree", "meal_period": "Lunch"},
-        {"id": "i3", "name": "Grilled Chicken Sandwich", "price": 9.0, "category": "Entree", "meal_period": "Dinner"},
-        {"id": "i4", "name": "Tom Brown", "price": 5.0, "category": "Entree", "meal_period": "Breakfast"},
-        {"id": "i5", "name": "Orange Juice", "price": 3.0, "category": "Beverage", "is_cold": true},
-        {"id": "i6", "name": "Sobolo", "price": 2.5, "category": "Beverage", "is_cold": true},
-        {"id": "i7", "name": "Chocolate Chip Cookie", "price": 2.0, "category": "Snack", "restricted_days": ["Saturday", "Sunday"]},
-        {"id": "i8", "name": "Atsormor", "price": 2.0, "category": "Snack", "restricted_days": []}
+        {
+          "id": "akn-001",
+          "name": "Egg Roll",
+          "category": "breakfast",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-002",
+          "name": "Egg Sandwich",
+          "category": "breakfast",
+          "price": 11,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-003",
+          "name": "Fluffy Pancake",
+          "category": "breakfast",
+          "price": 12,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-004",
+          "name": "Pancake",
+          "category": "breakfast",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-005",
+          "name": "Beef Sausage",
+          "category": "breakfast",
+          "price": 8,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-006",
+          "name": "Portioned Sausage",
+          "category": "breakfast",
+          "price": 8,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-007",
+          "name": "Meat Pie",
+          "category": "breakfast",
+          "price": 18,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-008",
+          "name": "Plain Croissant",
+          "category": "breakfast",
+          "price": 18,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-009",
+          "name": "Chocolate Croissant",
+          "category": "breakfast",
+          "price": 20,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-010",
+          "name": "Ring Doughnut",
+          "category": "breakfast",
+          "price": 12,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-011",
+          "name": "Sugar Coated Doughnut",
+          "category": "breakfast",
+          "price": 12,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-012",
+          "name": "Tom Brown",
+          "category": "breakfast",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-013",
+          "name": "Rice Porridge",
+          "category": "breakfast",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-014",
+          "name": "Oatmeal",
+          "category": "breakfast",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-015",
+          "name": "Milo 3-in-1",
+          "category": "beverage",
+          "price": 5.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-016",
+          "name": "Nescafe",
+          "category": "beverage",
+          "price": 5.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-017",
+          "name": "Cadbury",
+          "category": "beverage",
+          "price": 5.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-018",
+          "name": "Nescafe Black",
+          "category": "beverage",
+          "price": 1.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-019",
+          "name": "Lipton",
+          "category": "beverage",
+          "price": 1.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-020",
+          "name": "Sachet Milk",
+          "category": "beverage",
+          "price": 4.2,
+          "price_options": null,
+          "available": true,
+          "notes": "Add-on for hot drinks"
+        },
+        {
+          "id": "akn-021",
+          "name": "Fresh Milk",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true,
+          "notes": "Per cup"
+        },
+        {
+          "id": "akn-022",
+          "name": "Ice Cappuccino",
+          "category": "beverage",
+          "price": 25,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-023",
+          "name": "Strawberry Splash",
+          "category": "beverage",
+          "price": 12,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-024",
+          "name": "Waakye with option",
+          "category": "breakfast",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-025",
+          "name": "Steamed Rice and Bean Stew",
+          "category": "breakfast",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-026",
+          "name": "Red Red with Fried Plantain",
+          "category": "breakfast",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-027",
+          "name": "Ga Kenkey w/ Sardine and Omelet",
+          "category": "breakfast",
+          "price": 28,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-028",
+          "name": "Indomie Noodles w/ Sausage/Chicken/Omelette",
+          "category": "lunch_dinner",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-029",
+          "name": "Beef Burger",
+          "category": "lunch_dinner",
+          "price": 38,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-030",
+          "name": "French Fries w/ Ketchup & Chicken",
+          "category": "lunch_dinner",
+          "price": 35,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-031",
+          "name": "Burger & Chips",
+          "category": "lunch_dinner",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-032",
+          "name": "Crispy Fried Yam w/ Chicken & Chilli",
+          "category": "lunch_dinner",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-033",
+          "name": "Chicken (alone/side)",
+          "category": "lunch_dinner",
+          "price": 12,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-034",
+          "name": "Grilled Tilapia w/ Carb of Choice",
+          "category": "lunch_dinner",
+          "price": 35,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "akn-035",
+          "name": "Chicken Saute w/ Rice of Choice",
+          "category": "lunch_dinner",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        }
       ]
     },
     {
-      "id": "c2",
-      "name": "South Campus Grill",
-      "schedule": {
-        "Monday": {"open": "08:00", "close": "21:00"},
-        "Tuesday": {"open": "08:00", "close": "21:00"},
-        "Wednesday": {"open": "08:00", "close": "21:00"},
-        "Thursday": {"open": "08:00", "close": "21:00"},
-        "Friday": {"open": "08:00", "close": "21:00"}
+      "id": "hallmark",
+      "name": "Hallmark",
+      "menu": [
+        {
+          "id": "hlm-001",
+          "name": "Sandwich",
+          "category": "food",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-002",
+          "name": "Salads",
+          "category": "food",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-003",
+          "name": "Burger",
+          "category": "food",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-004",
+          "name": "Sub",
+          "category": "food",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-005",
+          "name": "French Fries",
+          "category": "food",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-006",
+          "name": "Crepe",
+          "category": "food",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-007",
+          "name": "Fried Egg",
+          "category": "food",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-008",
+          "name": "Boiled Egg",
+          "category": "food",
+          "price": 5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-009",
+          "name": "Toast (Bread)",
+          "category": "food",
+          "price": 5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-010",
+          "name": "Sausage",
+          "category": "food",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-011",
+          "name": "Chicken Wings",
+          "category": "food",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-012",
+          "name": "Plain Rice",
+          "category": "food",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-013",
+          "name": "Fried Rice",
+          "category": "food",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-014",
+          "name": "Fried Plantain",
+          "category": "food",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-015",
+          "name": "Blue Krusher",
+          "category": "beverage",
+          "price": 35,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-016",
+          "name": "Purple Krusher",
+          "category": "beverage",
+          "price": 35,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-017",
+          "name": "Blue Lagoon",
+          "category": "beverage",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-018",
+          "name": "Vanilla Milkshake",
+          "category": "beverage",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-019",
+          "name": "Caramel Milkshake",
+          "category": "beverage",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-020",
+          "name": "Yoghurt",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-021",
+          "name": "Coke",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-022",
+          "name": "Fanta",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-023",
+          "name": "Sprite",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-024",
+          "name": "Tampico",
+          "category": "beverage",
+          "price": 7,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-025",
+          "name": "Royal Apple (big)",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-026",
+          "name": "Royal Apple (small)",
+          "category": "beverage",
+          "price": 7,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-027",
+          "name": "Soya Milk",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-028",
+          "name": "Beta Malt",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-029",
+          "name": "BB Cocktail",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-030",
+          "name": "Mojito",
+          "category": "beverage",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-031",
+          "name": "Pineapple Juice",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-032",
+          "name": "Apple Juice",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hlm-033",
+          "name": "Watermelon Juice",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "munchies",
+      "name": "Munchies",
+      "breakfast_available": false,
+      "menu": [
+        {
+          "id": "mun-001",
+          "name": "Plain Rice",
+          "category": "food",
+          "price": null,
+          "price_options": [
+            {
+              "label": "small",
+              "price": 15
+            },
+            {
+              "label": "large",
+              "price": 18
+            }
+          ],
+          "available": true
+        },
+        {
+          "id": "mun-002",
+          "name": "Fried Rice",
+          "category": "food",
+          "price": null,
+          "price_options": [
+            {
+              "label": "small",
+              "price": 15
+            },
+            {
+              "label": "large",
+              "price": 18
+            }
+          ],
+          "available": true
+        },
+        {
+          "id": "mun-003",
+          "name": "Waakye",
+          "category": "food",
+          "price": null,
+          "price_options": [
+            {
+              "label": "small",
+              "price": 15
+            },
+            {
+              "label": "large",
+              "price": 18
+            }
+          ],
+          "available": true
+        },
+        {
+          "id": "mun-004",
+          "name": "Waffles",
+          "category": "food",
+          "price": null,
+          "price_options": [
+            {
+              "label": "2pc",
+              "price": 18
+            },
+            {
+              "label": "3pc",
+              "price": 25
+            }
+          ],
+          "available": true
+        },
+        {
+          "id": "mun-005",
+          "name": "Waffle and Chicken",
+          "category": "food",
+          "price": 28,
+          "price_options": null,
+          "available": true,
+          "notes": "Combo"
+        },
+        {
+          "id": "mun-006",
+          "name": "Chicken",
+          "category": "food",
+          "price": null,
+          "price_options": [
+            {
+              "label": "small",
+              "price": 15
+            },
+            {
+              "label": "large",
+              "price": 18
+            }
+          ],
+          "available": true
+        },
+        {
+          "id": "mun-007",
+          "name": "Jambalaya",
+          "category": "food",
+          "price": 42,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-008",
+          "name": "Stir Fry Spaghetti",
+          "category": "food",
+          "price": 36,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-009",
+          "name": "Boiled Egg",
+          "category": "food",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-010",
+          "name": "Sausage",
+          "category": "food",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-011",
+          "name": "Kelewele",
+          "category": "food",
+          "price": 24,
+          "price_options": null,
+          "available": true,
+          "unavailable_days": [
+            "Wednesday"
+          ]
+        },
+        {
+          "id": "mun-012",
+          "name": "Coleslaw",
+          "category": "food",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-013",
+          "name": "Rich Ghana Salad",
+          "category": "food",
+          "price": 24,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-014",
+          "name": "Fufu with any soup",
+          "category": "food",
+          "price": 10,
+          "price_options": null,
+          "available": true,
+          "available_days": [
+            "Saturday",
+            "Sunday"
+          ]
+        },
+        {
+          "id": "mun-015",
+          "name": "Chicken (protein add-on)",
+          "category": "protein_addon",
+          "price": 15,
+          "price_options": null,
+          "available": true,
+          "available_days": [
+            "Saturday",
+            "Sunday"
+          ],
+          "notes": "Can be bought alone"
+        },
+        {
+          "id": "mun-016",
+          "name": "Cow (protein add-on)",
+          "category": "protein_addon",
+          "price": 15,
+          "price_options": null,
+          "available": true,
+          "available_days": [
+            "Saturday",
+            "Sunday"
+          ],
+          "notes": "Can be bought alone"
+        },
+        {
+          "id": "mun-017",
+          "name": "Cow Intestine (protein add-on)",
+          "category": "protein_addon",
+          "price": 15,
+          "price_options": null,
+          "available": true,
+          "available_days": [
+            "Saturday",
+            "Sunday"
+          ],
+          "notes": "Can be bought alone"
+        },
+        {
+          "id": "mun-018",
+          "name": "Sobolo",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-019",
+          "name": "Water",
+          "category": "beverage",
+          "price": 3,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-020",
+          "name": "Bel Cola",
+          "category": "beverage",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-021",
+          "name": "Pastries",
+          "category": "food",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "mun-022",
+          "name": "Spring Rolls",
+          "category": "food",
+          "price": null,
+          "price_options": [
+            {
+              "label": "3pc",
+              "price": 20
+            }
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "hakuna",
+      "name": "Hakuna",
+      "type": "kiosk",
+      "menu": [
+        {
+          "id": "hak-001",
+          "name": "Ceres",
+          "category": "beverage",
+          "price": 44,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-002",
+          "name": "Fresh Milk",
+          "category": "beverage",
+          "price": 46,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-003",
+          "name": "Frutelli",
+          "category": "beverage",
+          "price": 38,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-004",
+          "name": "U Fresh",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-005",
+          "name": "BB Cocktail",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-006",
+          "name": "Fanta",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-007",
+          "name": "Calypo",
+          "category": "beverage",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-008",
+          "name": "Soft Drink",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-009",
+          "name": "Zest",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-010",
+          "name": "Tampico",
+          "category": "beverage",
+          "price": 9,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-011",
+          "name": "Minidrink",
+          "category": "beverage",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-012",
+          "name": "Rush",
+          "category": "beverage",
+          "price": 5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-013",
+          "name": "Donut",
+          "category": "snack",
+          "price": 12,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-014",
+          "name": "Tuna Filled",
+          "category": "snack",
+          "price": 15,
+          "price_options": null,
+          "available": true,
+          "notes": "Pastry"
+        },
+        {
+          "id": "hak-015",
+          "name": "Chocolate Croissant",
+          "category": "snack",
+          "price": 20,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-016",
+          "name": "Plain Croissant",
+          "category": "snack",
+          "price": 18,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-017",
+          "name": "Pie",
+          "category": "snack",
+          "price": 20,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-018",
+          "name": "Bread",
+          "category": "snack",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-019",
+          "name": "Nutrisnax",
+          "category": "snack",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-020",
+          "name": "Gari",
+          "category": "food",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "hak-021",
+          "name": "Beverage (sachet)",
+          "category": "beverage",
+          "price": 5,
+          "price_options": null,
+          "available": true,
+          "notes": "Per sachet"
+        },
+        {
+          "id": "hak-022",
+          "name": "Carnation",
+          "category": "beverage",
+          "price": 12,
+          "price_options": null,
+          "available": true,
+          "notes": "Milk"
+        },
+        {
+          "id": "hak-023",
+          "name": "Assorted",
+          "category": "snack",
+          "price": 3,
+          "price_options": null,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "essentials",
+      "name": "Essentials",
+      "meal_periods": {
+        "breakfast": null,
+        "lunch": null,
+        "dinner": null
       },
       "menu": [
-        {"id": "i9", "name": "Waakye with option", "price": 10.0, "category": "Entree", "meal_period": "Lunch"},
-        {"id": "i10", "name": "Red Red with Fried Plantain", "price": 9.0, "category": "Entree", "meal_period": "Lunch"},
-        {"id": "i11", "name": "Ga Kenkey w/ Sardine and Omelet", "price": 8.0, "category": "Entree", "meal_period": "Breakfast"},
-        {"id": "i12", "name": "Bottled Water", "price": 1.5, "category": "Beverage", "is_cold": true},
-        {"id": "i13", "name": "Kelewele", "price": 3.0, "category": "Snack", "restricted_days": ["Sunday"]}
+        {
+          "id": "ess-001",
+          "name": "Malta Guinness",
+          "category": "beverage",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-002",
+          "name": "BB Cocktail",
+          "category": "beverage",
+          "price": 14,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-003",
+          "name": "Lucozade",
+          "category": "beverage",
+          "price": 17,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-004",
+          "name": "Soursop Drink",
+          "category": "beverage",
+          "price": 16,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-005",
+          "name": "Sparkling Vimto",
+          "category": "beverage",
+          "price": 17,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-006",
+          "name": "Vimto",
+          "category": "beverage",
+          "price": 16,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-007",
+          "name": "Dudu Mixed Fruit Drink",
+          "category": "beverage",
+          "price": 18,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-008",
+          "name": "Red Bull",
+          "category": "beverage",
+          "price": 26,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-009",
+          "name": "Mixed Fruits Drink",
+          "category": "beverage",
+          "price": 17,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-010",
+          "name": "Vita Top Drink",
+          "category": "beverage",
+          "price": 13,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-011",
+          "name": "Galaxy Chocolate Chip Cookies",
+          "category": "snack",
+          "price": 45,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-012",
+          "name": "Pringles",
+          "category": "snack",
+          "price": 16,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-013",
+          "name": "Digestive",
+          "category": "snack",
+          "price": 36,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-014",
+          "name": "Chocolate Digestives",
+          "category": "snack",
+          "price": 60,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-015",
+          "name": "Milk Soda Crackers",
+          "category": "snack",
+          "price": 16.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-016",
+          "name": "Jacob's Cream Crackers",
+          "category": "snack",
+          "price": 42,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-017",
+          "name": "Nutrisnax",
+          "category": "snack",
+          "price": 7,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-018",
+          "name": "Hupseng Crackers",
+          "category": "snack",
+          "price": 20,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-019",
+          "name": "Atsormor",
+          "category": "snack",
+          "price": 15,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-020",
+          "name": "Storm Energy Drink",
+          "category": "beverage",
+          "price": 8,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-021",
+          "name": "Casera Apple Drink",
+          "category": "beverage",
+          "price": 11,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-022",
+          "name": "Coca Cola 450ml",
+          "category": "beverage",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-023",
+          "name": "Rush",
+          "category": "beverage",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-024",
+          "name": "Welch",
+          "category": "beverage",
+          "price": 45,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-025",
+          "name": "Hollandia",
+          "category": "beverage",
+          "price": 8.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-026",
+          "name": "Toren Chocolate",
+          "category": "beverage",
+          "price": 8,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-027",
+          "name": "Nature Valley Biscuit",
+          "category": "snack",
+          "price": 20,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-028",
+          "name": "Fun-O",
+          "category": "beverage",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-029",
+          "name": "Poker Wafers",
+          "category": "snack",
+          "price": 7,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-030",
+          "name": "Mr Bite Pixel",
+          "category": "snack",
+          "price": 7,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-031",
+          "name": "Kin Cracker",
+          "category": "snack",
+          "price": 4,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-032",
+          "name": "Jack In Jill",
+          "category": "snack",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-033",
+          "name": "Don Simon 500ml",
+          "category": "beverage",
+          "price": 22,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-034",
+          "name": "Wheat Drink",
+          "category": "beverage",
+          "price": 18,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-035",
+          "name": "Malta Guinness",
+          "category": "beverage",
+          "price": 14,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-036",
+          "name": "Royal Apple Drink",
+          "category": "beverage",
+          "price": 5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-037",
+          "name": "Welch",
+          "category": "beverage",
+          "price": 22,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-038",
+          "name": "Apple And Eve (Bottle)",
+          "category": "beverage",
+          "price": 24,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-039",
+          "name": "Niche Chocolate Drink",
+          "category": "beverage",
+          "price": 7,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-040",
+          "name": "Ekumfi",
+          "category": "beverage",
+          "price": 9,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-041",
+          "name": "Super 2",
+          "category": "snack",
+          "price": 3.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-042",
+          "name": "Milky Way Biscuits",
+          "category": "snack",
+          "price": 38,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-043",
+          "name": "Butter Shortbread",
+          "category": "snack",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-044",
+          "name": "Tower Gate",
+          "category": "snack",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-045",
+          "name": "Malt and Milk",
+          "category": "beverage",
+          "price": 4,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-046",
+          "name": "Slai O'lai",
+          "category": "snack",
+          "price": 3,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-047",
+          "name": "Munchkins",
+          "category": "snack",
+          "price": 10.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-048",
+          "name": "Lite Bite",
+          "category": "snack",
+          "price": 4.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-049",
+          "name": "Apple and Eve (Carton)",
+          "category": "beverage",
+          "price": 13,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-050",
+          "name": "BOSS Energy Drink",
+          "category": "beverage",
+          "price": 5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-051",
+          "name": "Beta Malt",
+          "category": "beverage",
+          "price": 12,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-052",
+          "name": "Vitamilk",
+          "category": "beverage",
+          "price": 20,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-053",
+          "name": "Alvaro",
+          "category": "beverage",
+          "price": 13,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-054",
+          "name": "Countre Milk",
+          "category": "beverage",
+          "price": 32,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-055",
+          "name": "Ceres",
+          "category": "beverage",
+          "price": 20,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-056",
+          "name": "Ensure",
+          "category": "beverage",
+          "price": 44,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-057",
+          "name": "Ginger Biscuit",
+          "category": "snack",
+          "price": 6,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-058",
+          "name": "Chocolate Chip",
+          "category": "snack",
+          "price": 10,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-059",
+          "name": "Milk Shortcake Biscuit",
+          "category": "snack",
+          "price": 5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-060",
+          "name": "Simply Good",
+          "category": "snack",
+          "price": 4.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-061",
+          "name": "Frutelli",
+          "category": "beverage",
+          "price": 33,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-062",
+          "name": "Ceres Big One",
+          "category": "beverage",
+          "price": 40,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-063",
+          "name": "Hollandia Big One",
+          "category": "beverage",
+          "price": 30,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-064",
+          "name": "Don Simon",
+          "category": "beverage",
+          "price": 38,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-065",
+          "name": "Peak Big One",
+          "category": "beverage",
+          "price": 45,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-066",
+          "name": "Zomba Champagne",
+          "category": "beverage",
+          "price": 45,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-067",
+          "name": "Lays Big One",
+          "category": "snack",
+          "price": 45,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-068",
+          "name": "Bourbon Biscuit",
+          "category": "snack",
+          "price": 8,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-069",
+          "name": "Welch Fruit Snacks",
+          "category": "snack",
+          "price": 5.5,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-070",
+          "name": "Galaxy Milk Chocolate Biscuits",
+          "category": "snack",
+          "price": 50,
+          "price_options": null,
+          "available": true
+        },
+        {
+          "id": "ess-071",
+          "name": "Potato Chips",
+          "category": "snack",
+          "price": 8,
+          "price_options": null,
+          "available": true
+        }
       ]
     }
   ]
