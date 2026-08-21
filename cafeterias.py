@@ -1,5 +1,17 @@
 # cafeterias.py
+import json
+import os
+from models import Cafeteria, Entree, Beverage, Snack
+from nutrition_api import get_nutrition_data
 
+def load_all_cafeterias(json_path="data/cafeteria_menus.json"):
+    if not os.path.exists(json_path):
+        return {}
+
+    with open(json_path, "r") as f:
+        data = json.load(f)
+
+    cafeterias_dict = {}
 import json
 import os
 from models import Cafeteria, Entree, Beverage, Snack
