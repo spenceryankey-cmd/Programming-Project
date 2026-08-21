@@ -5,13 +5,7 @@ import os
 from models import Cafeteria, Entree, Beverage, Snack
 from nutrition_api import get_nutrition_data
 
-_BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-_DEFAULT_JSON_PATH = os.path.join(_BASE_DIR, "data", "cafeteria_menus.json")
-
-def load_all_cafeterias(json_path=_DEFAULT_JSON_PATH):
-    """
-    Loads all cafeterias and their menu items from the JSON file
-    """
+def load_all_cafeterias(json_path="data/cafeteria_menus.json"):
     if not os.path.exists(json_path):
         return {}
 
@@ -30,7 +24,7 @@ def load_all_cafeterias(json_path=_DEFAULT_JSON_PATH):
         for item_data in cafe_data.get("menu", []):
             item_id = item_data["id"]
             name = item_data["name"]
-            price = item_data["price"]
+            price = item_data.get("price") or 0.0
             category = item_data.get("category", "General")
             
             nutrition = get_nutrition_data(name)
@@ -38,21 +32,19 @@ def load_all_cafeterias(json_path=_DEFAULT_JSON_PATH):
             kwargs = {
                 "item_id": item_id,
                 "name": name,
-                "price": price,
+                "price": float(price),
                 "calories": nutrition["calories"],
                 "protein": nutrition["protein"],
                 "allergens": nutrition["allergens"]
             }
 
-            if category == "Entree":
-                meal_period = item_data.get("meal_period", "Lunch")
-                item = Entree(meal_period=meal_period, **kwargs)
-            elif category == "Beverage":
-                is_cold = item_data.get("is_cold", True)
-                item = Beverage(is_cold=is_cold, **kwargs)
-            elif category == "Snack":
-                restricted_days = item_data.get("restricted_days", [])
-                item = Snack(restricted_days=restricted_days, **kwargs)
+            # Instantiate polymorphic subclasses based on category
+            if category.lower() in ["breakfast", "entree", "lunch_dinner", "food"]:
+                item = Entree(**kwargs)
+            elif category.lower() == "beverage":
+                item = Beverage(**kwargs)
+            elif category.lower() == "snack":
+                item = Snack(**kwargs)
             else:
                 item = Entree(**kwargs)
 
@@ -62,18 +54,15 @@ def load_all_cafeterias(json_path=_DEFAULT_JSON_PATH):
 
     return cafeterias_dict
 
-
 ALL_CAFES = load_all_cafeterias()
 
-def get_menu(cafeteria_name, date="Monday"):
-    """Returns all menu items for a specific cafeteria."""
+def get_menu(cafeteria_name):
     cafe = ALL_CAFES.get(cafeteria_name)
     if cafe:
         return [item.to_dict() for item in cafe.menu_items]
     return []
 
 def get_items_available_at(current_time="12:00", current_day="Monday"):
-    """Returns all items currently available across all cafeterias based on time and day."""
     available_results = []
     for cafe_name, cafe in ALL_CAFES.items():
         items = cafe.get_available_items(current_time, current_day)
@@ -84,7 +73,6 @@ def get_items_available_at(current_time="12:00", current_day="Monday"):
     return available_results
 
 def search_by_name(query_str):
-    """Performs a case-insensitive string search across all menu items."""
     query_str = query_str.lower()
     matches = []
     for cafe_name, cafe in ALL_CAFES.items():
